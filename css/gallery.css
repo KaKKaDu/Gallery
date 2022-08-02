@@ -1,0 +1,196 @@
+
+body {
+	background-color: #FBFBFB !important;
+	height: 100vh;
+}
+
+#sect {
+	padding: 30px;
+	padding-left: 50px;
+	transition: 1.2s;
+	width: 100%;
+	height: 100%;
+}
+
+.sectop {
+	margin-left: 300px;
+	width: calc(100% - 300px) !important;
+	transition: 1.2s;
+}
+
+.plusclosed {
+	margin-bottom: 15px;
+	margin-left: -50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px !important;
+	text-decoration: none;
+	border-radius: 50%;
+	transition: 1.2s;
+}
+
+
+.plusopen {
+	margin-left: 125px;
+	transform: rotate(180deg);
+	transition: 1.2s;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+.navbar {
+	overflow: scroll;
+	position: relative;
+	width: 300px;
+	margin-left: -300px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	border-right:solid 2px #DE9039;
+	background-color: #FBFAFA !important;
+	transition: 1.2s;
+}
+
+
+.navbshow {
+	margin-left: 0;
+	transition: 1.2s;
+}
+
+.navbar-header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.navbar-header .row {
+	width: 100%;
+}
+
+.navbar-header .row i {
+	color: #DE9039;
+}
+
+.navbar-header h1 {
+	color: #484848;
+}
+
+.navbar-nav .nav-item {
+	width: calc(100% + 11px);
+}
+
+.nav-item {
+	position: relative;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.nav-item:hover {
+	background-color: #F1F1F1;
+}
+
+.libraryfoc {
+	background-color: #F1F1F1;	
+}
+
+.nav-item i {
+	font-size: 30px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-link {
+	color: #484848 !important;
+	padding-right: 0 !important;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 1.4em;
+	padding: 10px;
+}
+
+.morelink {
+	text-decoration: none;
+	color: #484848;
+}
+
+.morelink:hover {
+	color: #DE9039;
+}
+
+.btnclosed {
+	margin-left: 10px;
+	transform: rotate(0deg);
+	transition: 1.2s;
+}
+
+.btnopen {
+	margin-left: 310px;
+	transform: rotate(180deg);
+	transition: 1.2s;
+}
+
+.butmen {
+	width: 20px;
+	color: #484848;
+}
+
+.butmen:hover i {
+	color: #DE9039 ;
+}
+
+.option {
+	width: 100%;
+	margin: 0;
+	padding-right: 0 !important;
+}
+
+.option .optli {
+	list-style: none;
+	width: 100%;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.option .optli:hover {
+	background-color: #E7E6E6;
+	border: solid 1px transparent;
+}
+
+.option .optli:hover a {
+	color: #484848;
+	border-bottom-color: #DE9039;
+}
+
+.option .optli a {
+	text-decoration: none;
+	margin-left: 50px;
+	color: #484848;
+	font-size: 1em;
+	padding-bottom: 3px;
+	border: solid 1px transparent;
+}
+
+.hidde {
+	display: none;
+}
+
+.nothing {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nothing h2 {
+	color: gray;
+}
+
+/*@media (max-width: 360px) {
+
+}*/

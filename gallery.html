@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gallery</title>
+
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<script src="https://kit.fontawesome.com/4b807adfb7.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+	<nav class="navbar navbar-expand d-flex flex-column align-item-start h-100 fixed-top" id="navig">
+		<div class="navbar-header my-3">
+			<div class="row text-center">
+				<i class="fa-solid fa-camera-retro col-12 fa-3x my-3"></i>
+				<h1 class="col-12"><b>Gallery</b></h1>
+				<hr class="col-8 offset-2 my-2">
+			</div>
+		</div>
+		<div class="navbar-nav d-flex flex-column w-100">
+			<li class="nav-item row libraryfoc">
+				<a href="javascript:void(0)" class="nav-link col-8 offset-1">Default</a>
+				<a href="javascript:void(0)" class="col-3 morelink"><i class="fa-solid fa-ellipsis"></i></a>
+				<ul class="option hidde col-12" id="opt">
+					<li class="optli">
+						<a href="javascript:void(0)">Delete</a>
+					</li>
+					<li class="optli">
+						<a href="javascript:void(0)">Rename</a>
+					</li>
+				</ul>
+			</li>
+		</div>
+		<a href="#" id="plus" class= "plusclosed butmen fixed-bottom" onclick="makelib()"><i class="fa-solid fa-plus fa-2x"></i></a>
+	</nav>
+	<a class="btnclosed butmen fixed-top" id="buton"><i class="fa-solid fa-angle-right fa-2x" onclick="openclose()"></i></a>
+
+	<section id="sect">
+		<div class="nothing">
+			<h2>This library is empty. Add your first photo!</h2>
+		</div>
+	</section>
+
+
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/gallery.js"></script>
+
+</body>
+</html>
