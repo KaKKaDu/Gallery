@@ -40,16 +40,25 @@ let makelib = function(){
 				</ul>
 			</li>
 		`);
-	lib.setAttribute('id', makeid())
+	lib.setAttribute('id', makeid());
 	navigation.appendChild(lib);
 	console.log(morelink);
+	let section = newlibrary(`
+		<section id="sect" class='hidde'>
+			<div class="nothing">
+				<h2>This library is empty. Add your first photo!</h2>
+			</div>
+		</section>
+		`)
+	section.setAttribute('id', makeid());
+	document.body.appendChild(section);
 }
 
 navigation.addEventListener('click', function(e) {
 	if (e.target.classList.contains('fa-ellipsis')) {
 		e.target.parentNode.parentNode.lastElementChild.classList.toggle('hidde');
 	} else if (e.target.classList.contains('morelink')) {
-		console.log(e.target.parentNode);
+		e.target.parentNode.lastElementChild.classList.toggle('hidde');
 	}
 })
 
