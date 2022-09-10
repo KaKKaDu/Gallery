@@ -4,7 +4,7 @@ body {
 	height: 100vh;
 }
 
-#sect {
+.currentsect {
 	padding: 30px;
 	padding-left: 50px;
 	transition: 1.2s;

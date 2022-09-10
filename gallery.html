@@ -24,14 +24,14 @@
 			</div>
 		</div>
 		<div class="navbar-nav d-flex flex-column w-100">
-			<li class="nav-item row libraryfoc">
+			<li class="nav-item row libraryfoc" id="butdef">
 				<a href="javascript:void(0)" class="nav-link col-8 offset-1">Default</a>
 				<a href="javascript:void(0)" class="col-3 morelink"><i class="fa-solid fa-ellipsis"></i></a>
 				<ul class="option hidde col-12" id="opt">
-					<li class="optli">
+					<li class="optli" id="deletedef">
 						<a href="javascript:void(0)">Delete</a>
 					</li>
-					<li class="optli">
+					<li class="optli" id="renamedef">
 						<a href="javascript:void(0)">Rename</a>
 					</li>
 				</ul>
@@ -41,7 +41,7 @@
 	</nav>
 	<a class="btnclosed butmen fixed-top" id="buton"><i class="fa-solid fa-angle-right fa-2x" onclick="openclose()"></i></a>
 
-	<section id="sect">
+	<section id="sect" class="currentsect">
 		<div class="nothing">
 			<h2>This library is empty. Add your first photo!</h2>
 		</div>
