@@ -15,6 +15,26 @@
 
 </head>
 <body>
+	<div class="quest container-fluid hidde" id="quest">
+		<div class="form col-xl-6 col-lg-6 col-md-6 col-sm-8 col-xs-10">
+			<div class="sure">
+				<h3 class="suretex" id="suretex">Are u sure u want to delete this library?</h3>
+				<div class="renamcont hidde" id="renamcont">
+					<input class="renam" id="renam">
+				</div>
+			</div>
+			<div class="container-fluid agree">
+				<div class="row agrerow">
+					<div class="col-6 cont" onclick="endquest('contin')">
+						<a href="javascript:void(0)" class="agrcont agrbut">Continue</a>
+					</div>
+					<div class="col-6 cont" onclick="endquest('canc')">
+						<a href="javascript:void(0)" class="agrcanc agrbut">Cancel</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<nav class="navbar navbar-expand d-flex flex-column align-item-start h-100 fixed-top" id="navig">
 		<div class="navbar-header my-3">
 			<div class="row text-center">
@@ -28,10 +48,10 @@
 				<a href="javascript:void(0)" class="nav-link col-8 offset-1">Default</a>
 				<a href="javascript:void(0)" class="col-3 morelink"><i class="fa-solid fa-ellipsis"></i></a>
 				<ul class="option hidde col-12" id="opt">
-					<li class="optli" id="deletedef">
+					<li class="optli del" id="deletedef">
 						<a href="javascript:void(0)">Delete</a>
 					</li>
-					<li class="optli" id="renamedef">
+					<li class="optli ren" id="renamedef">
 						<a href="javascript:void(0)">Rename</a>
 					</li>
 				</ul>

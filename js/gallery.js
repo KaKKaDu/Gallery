@@ -2,11 +2,15 @@
 
 let navig = $("#navig");
 let buton = $("#buton");
+let quest = $('#quest');
 window.sectop = document.getElementById("sect");
 let plus = $("#plus");
 let navigation = document.querySelector('.navbar-nav');
 let morelink = document.getElementsByClassName('morelink');
-let opt = document.getElementById("opt");;
+let opt = document.getElementById("opt");
+let suretex = $("#suretex");
+let renam = $("#renam");
+let renamcont = $("#renamcont");
 
 let openclose = function () {
 	navig.toggleClass('navbshow');
@@ -38,10 +42,10 @@ let makelib = function(){
 				<a href="javascript:void(0)" class="nav-link col-8 offset-1">New ` + id +`</a>
 				<a href="javascript:void(0)" class="col-3 morelink"><i class="fa-solid fa-ellipsis"></i></a>
 				<ul class="option col-12 hidde">
-					<li class="optli" id = 'delete-` + id + `'>
+					<li class="optli del" id = 'delete-` + id + `'>
 						<a href="javascript:void(0)">Delete</a>
 					</li>
-					<li class="optli" id = 'rename-` + id + `'>
+					<li class="optli ren" id = 'rename-` + id + `'>
 						<a href="javascript:void(0)">Rename</a>
 					</li>
 				</ul>
@@ -52,7 +56,7 @@ let makelib = function(){
 	lib.setAttribute('id', 'menu-' + id);
 	navigation.appendChild(lib);
 	let section = newlibrary(`
-		<section id="sect" class='hidde'>
+		<section id="sect" class='hidde actsect'>
 			<div class="nothing">
 				<h2>This library is empty. Add your first photo! `+ id +`</h2>
 			</div>
@@ -101,6 +105,34 @@ butdef.onclick = function(event) {
 	window.currentSectionId = 'sect';
 }
 
+navigation.addEventListener('click', function (cli) {
+	if(cli.target.classList.contains('del') || cli.target.classList.contains('ren')) {
+		navig.addClass('point');
+		quest.removeClass('hidde');
+		buton.addClass('point');
+		let cursect = document.getElementById(window.currentSectionId);
+		console.log('cursect');
+		cursect.classList.add('point');
+	}
+
+	if (cli.target.classList.contains('del')) {
+		suretex.html('Are u sure u want to delete this library?');
+		renamcont.addClass('hidde');
+	} else if (cli.target.classList.contains('ren')) {
+		suretex.html('How do you want to rename this library?');
+		renamcont.removeClass('hidde');
+	}
+})
+
+let endquest = function (exbut) {
+	navig.removeClass('point');
+	quest.addClass('hidde');
+	buton.removeClass('point');
+	let cursect = document.getElementById(window.currentSectionId);
+	cursect.classList.remove('point');
+	renam.val('');
+}
+
 navigation.addEventListener('click', function(e) {
 	if (e.target.classList.contains('fa-ellipsis')) {
 		e.target.parentNode.parentNode.lastElementChild.classList.toggle('hidde');
@@ -108,10 +140,3 @@ navigation.addEventListener('click', function(e) {
 		e.target.parentNode.lastElementChild.classList.toggle('hidde');
 	}
 })
-
-/*<li class="optli" id = 'delete-` + id + `'>
-						<a href="javascript:void(0)">Delete</a>
-					</li>
-					<li class="optli" id = 'rename-` + id + `'>
-						<a href="javascript:void(0)">Rename</a>
-					</li>*/
