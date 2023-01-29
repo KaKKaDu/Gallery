@@ -7,7 +7,11 @@ That's planned to connect **firebase** in the future, but now the main target is
 I used function **appendChild** in combination with some vars
 ___
 ```javascript
-
+function newlibrary(html) {
+		const template = document.createElement("template");
+		template.innerHTML = html.trim();
+		return template.content.firstElementChild; 
+}
 ```
 
 
