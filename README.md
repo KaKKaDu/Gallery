@@ -4,7 +4,7 @@ The main idea is to create an **interact gallery**, where you can make your own 
 That's planned to connect **firebase** in the future, but now the main target is to finish work with javascript features.
 ## What I've already learnt?
 ### Creating elements by interacting with the page (libraries in this case)
-I used function **appendChild** with use of some vars
+I used function **appendChild** in combination with some vars
 ___
 ```javascript
 
